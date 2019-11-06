@@ -6,6 +6,12 @@ matrix:
     - os: osx
       osx_image: xcode8.3
       language: objective-c
+    - os: osx
+      osx_image: xcode11.1
+      language: objective-c
+      env: ALLOW_FAIL=1
+  allow_failures:
+      env: ALLOW_FAIL=1
 
 script:
   - . ./.travis/build.sh
